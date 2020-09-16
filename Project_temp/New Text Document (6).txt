@@ -1,0 +1,37 @@
+Bundle b = new Bundle();
+b.putStringArray(key, new String[]{value1, value2});
+Intent i=new Intent(context, Class);
+i.putExtras(b);
+
+
+
+
+Bundle b = this.getIntent().getExtras();
+String[] array=b.getStringArray(key);
+
+////////////////////////////////////
+<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sub_title"
+        android:layout_toRightOf="@+id/price"
+        android:text="Add to Cart"
+        android:fontFamily="monospace"
+        android:textAllCaps="false"
+        android:id="@+id/addCart"
+        android:textStyle="italic"/>
+
+////////////////////////////////////
+String text = null;
+                ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clipData = clipboardManager.getPrimaryClip();
+                int itemCount = clipData.getItemCount();
+                if (itemCount > 0) {
+                    ClipData.Item item = clipData.getItemAt(0);
+                    text = item.getText().toString();
+                }
+                //cart_title[0]=text;
+                Toast.makeText(BookActivity.this, text, Toast.LENGTH_SHORT).show();
+
+////////////////////////////////////
+

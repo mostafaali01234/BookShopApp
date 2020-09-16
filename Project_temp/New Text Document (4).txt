@@ -1,0 +1,13 @@
+<ImageView
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="15dp"
+      android:src="@drawable/bookico1" />
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:scaleType="centerCrop"
+      android:layout_marginBottom="30dp"
+      android:src="@drawable/bookshop2" />
